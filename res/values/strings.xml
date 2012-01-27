@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ACTIVITY_ENTRY_NAME</string>
+    <string name="server_error_alert">Unable to reach the server. Please try again in a few minutes.</string>
+    <string name="connection_unavailable_alert">No Internet connection is available at this time.</string>
+    <string name="server_timeout_alert">The server is taking a while to respond. Please try again in a few minutes.</string>
+    <string name="bad_authentication_alert">You are not authorized to perform that action. Please log in and try again.</string>
+    <string name="no_network_available">No network connection is currently available</string>
+    <string name="error_alert">An error was encountered and we were unable to perform the requested action.</string>
+</resources>
