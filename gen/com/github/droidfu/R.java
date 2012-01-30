@@ -49,13 +49,14 @@ containing a value of this type.
         public static int main=0x7f030000;
     }
     public static final class string {
-        public static int app_name=0x7f040001;
-        public static int bad_authentication_alert=0x7f040005;
-        public static int connection_unavailable_alert=0x7f040003;
-        public static int error_alert=0x7f040007;
-        public static int no_network_available=0x7f040006;
-        public static int server_error_alert=0x7f040002;
-        public static int server_timeout_alert=0x7f040004;
+        public static int hd_authentication_failed_message=0x7f040005;
+        public static int hd_connection_unavailable=0x7f040003;
+        public static int hd_error_message=0x7f040007;
+        public static int hd_network_unavailable_message=0x7f040006;
+        public static int hd_ok=0x7f040008;
+        public static int hd_server_error_message=0x7f040002;
+        public static int hd_server_timeout_message=0x7f040004;
+        public static int hungry_droid=0x7f040001;
         public static int test=0x7f040000;
     }
     public static final class style {
@@ -100,7 +101,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:autoLoad
         */
-        public static int GalleryItem_autoLoad = 1;
+        public static final int GalleryItem_autoLoad = 1;
         /**
           <p>This symbol is the offset where the {@link com.hungrymachine.hungrydroid.R.attr#imageUrl}
           attribute's value can be found in the {@link #GalleryItem} array.
@@ -114,7 +115,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:imageUrl
         */
-        public static int GalleryItem_imageUrl = 0;
+        public static final int GalleryItem_imageUrl = 0;
         /**
           <p>This symbol is the offset where the {@link com.hungrymachine.hungrydroid.R.attr#progressDrawable}
           attribute's value can be found in the {@link #GalleryItem} array.
@@ -128,7 +129,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:progressDrawable
         */
-        public static int GalleryItem_progressDrawable = 2;
+        public static final int GalleryItem_progressDrawable = 2;
         /**
           <p>This symbol is the offset where the {@link com.hungrymachine.hungrydroid.R.attr#test}
           attribute's value can be found in the {@link #GalleryItem} array.
@@ -142,6 +143,6 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:test
         */
-        public static int GalleryItem_test = 3;
+        public static final int GalleryItem_test = 3;
     };
 }
