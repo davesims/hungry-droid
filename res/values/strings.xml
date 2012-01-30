@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ACTIVITY_ENTRY_NAME</string>
-    <string name="server_error_alert">Unable to reach the server. Please try again in a few minutes.</string>
-    <string name="connection_unavailable_alert">No Internet connection is available at this time.</string>
-    <string name="server_timeout_alert">The server is taking a while to respond. Please try again in a few minutes.</string>
-    <string name="bad_authentication_alert">You are not authorized to perform that action. Please log in and try again.</string>
-    <string name="no_network_available">No network connection is currently available</string>
-    <string name="error_alert">An error was encountered and we were unable to perform the requested action.</string>
+    <string name="hungry_droid">HungryDroid</string>
+    <string name="hd_server_error_message">Unable to reach the server. Please try again in a few minutes.</string>
+    <string name="hd_connection_unavailable">No Internet connection is available at this time.</string>
+    <string name="hd_server_timeout_message">The server is taking a while to respond. Please try again in a few minutes.</string>
+    <string name="hd_authentication_failed_message">You are not authorized to perform that action. Please log in and try again.</string>
+    <string name="hd_network_unavailable_message">No network connection is currently available</string>
+    <string name="hd_error_message">An error was encountered and we were unable to perform the requested action.</string>
+    <string name="hd_ok">OK</string>
 </resources>
