@@ -76,7 +76,7 @@ public class ApiResult<T> {
         if (this.exception != null) {
             return this.exception.getErrorMessageForUser();
         } else {
-            return HungryDroid.appInstance().getString(R.string.error_alert);
+            return HungryDroid.appInstance().getString(R.string.hd_error_message);
         }
     }
 

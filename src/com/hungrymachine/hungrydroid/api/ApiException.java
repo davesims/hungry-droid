@@ -2,12 +2,12 @@ package com.hungrymachine.hungrydroid.api;
 
 import com.hungrymachine.hungrydroid.HungryDroid;
 import com.hungrymachine.hungrydroid.R;
+import com.hungrymachine.hungrydroid.net.NetworkService;
 import com.hungrymachine.hungrydroid.utils.HungryLogger;
 
 
 public abstract class ApiException extends RuntimeException {
     private static final long serialVersionUID = 1L;
-    public static final String FILE_NOT_FOUND_EXCEPTION = "FileNotFoundException";
     public static final String NO_AUTH = "Received authentication challenge is null";
     public static final String SOCKET_TIMEOUT_EXCEPTION = "SocketTimeoutException";
     private static final String name = "ApiException";
@@ -51,7 +51,7 @@ public abstract class ApiException extends RuntimeException {
 
     public static class TimeOut extends ApiException {
         private static final long serialVersionUID = 2L;
-        private final static String errorMessage = getString(R.string.server_timeout_alert);
+        private final static String errorMessage = getString(R.string.hd_server_timeout_message);
 
         public TimeOut(Exception ex) {
             super(ex);
@@ -70,7 +70,7 @@ public abstract class ApiException extends RuntimeException {
 
     public static class NotAuthenticated extends ApiException {
         private static final long serialVersionUID = 3L;
-        private final static String errorMessage = getString(R.string.bad_authentication_alert);
+        private final static String errorMessage = getString(R.string.hd_authentication_failed_message);
 
         public NotAuthenticated(Exception ex) {
             super(ex);
@@ -89,7 +89,7 @@ public abstract class ApiException extends RuntimeException {
 
     public static class ConnectionUnavailable extends ApiException {
         private static final long serialVersionUID = 4L;
-        private final static String errorMessage = getString(R.string.connection_unavailable_alert);
+        private final static String errorMessage = getString(R.string.hd_connection_unavailable);
 
         public ConnectionUnavailable(Exception ex) {
             super(ex);
@@ -116,7 +116,7 @@ public abstract class ApiException extends RuntimeException {
 
     public static class ServerError extends ApiException {
         private static final long serialVersionUID = 5L;
-        private final static String errorMessage = getString(R.string.server_error_alert);
+        private final static String errorMessage = getString(R.string.hd_server_error_message);
 
         public ServerError(Exception ex) {
             super(ex);
