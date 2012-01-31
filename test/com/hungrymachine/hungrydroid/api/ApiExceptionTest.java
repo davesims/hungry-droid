@@ -1,7 +1,9 @@
-package com.livingsocial.android.api;
+package com.hungrymachine.hungrydroid.api;
 
 import android.app.Activity;
-import com.livingsocial.android.LivingSocial;
+import android.app.Application;
+import com.hungrymachine.hungrydroid.HungryDroid;
+import com.hungrymachine.hungrydroid.net.NetworkService;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +19,8 @@ public class ApiExceptionTest {
     
     @Before
     public void setup() {
-        LivingSocial.setAppContext(new Activity().getApplicationContext());
+        Application app = new Application();
+        HungryDroid.initialize(app, new Activity());
     }
 
     @Test
@@ -31,13 +34,6 @@ public class ApiExceptionTest {
         RuntimeException ex = new RuntimeException(NetworkService.NO_NETWORK_AVAILABLE);
         Exception apiException = ApiException.create(ex);
         assertThat(apiException, instanceOf(ApiException.ConnectionUnavailable.class));
-    }
-
-    @Test
-    public void shouldCreateServerErrorForFileNotFoundException() {
-        RuntimeException ex = new RuntimeException(ApiException.FILE_NOT_FOUND_EXCEPTION);
-        Exception apiException = ApiException.create(ex);
-        assertThat(apiException, instanceOf(ApiException.ServerError.class));
     }
 
     @Test

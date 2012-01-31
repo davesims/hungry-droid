@@ -1,4 +1,4 @@
-package com.livingsocial.android.api;
+package com.hungrymachine.hungrydroid.api;
 
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import org.junit.Test;

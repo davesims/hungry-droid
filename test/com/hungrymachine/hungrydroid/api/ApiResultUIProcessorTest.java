@@ -1,4 +1,4 @@
-package com.livingsocial.android.api;
+package com.hungrymachine.hungrydroid.api;
 
 import android.content.Context;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
@@ -38,6 +38,10 @@ public class ApiResultUIProcessorTest {
         @Override
         public void handleSuccess(Object resultObject) {
             
+        }
+
+        @Override
+        public void logOutAndShowAuthenticationRejectedMessage(ApiResult apiResult, Context context) {
         }
     }
 }

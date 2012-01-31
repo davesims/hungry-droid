@@ -1,4 +1,4 @@
-package com.livingsocial.android.api;
+package com.hungrymachine.hungrydroid.api;
 
 import org.junit.Before;
 import org.junit.Test;
