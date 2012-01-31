@@ -26,7 +26,7 @@ public class NetworkService implements Service {
     private static String name = "NetworkService";
     public final static String DEFAULT_ENCODING = "utf-8";
     public final static int TIMEOUT = 30000;
-    public static final String NO_NETWORK_AVAILABLE = HungryDroid.appInstance().getString(R.string.hd_network_unavailable_message);
+    public static final String NO_NETWORK_AVAILABLE = HungryDroid.getApplicationContext().getString(R.string.hd_network_unavailable_message);
 
     private static class LazyHolder {
         public static final ConnectivityManager INSTANCE = (ConnectivityManager) HungryDroid.appInstance().getSystemService(Context.CONNECTIVITY_SERVICE);

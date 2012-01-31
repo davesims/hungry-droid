@@ -110,7 +110,7 @@ public abstract class ApiException extends RuntimeException {
     }
 
     private static String getString(int stringId) {
-        return HungryDroid.appInstance().getString(stringId);
+        return HungryDroid.getApplicationContext().getString(stringId);
     }
 
 
