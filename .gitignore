@@ -21,4 +21,6 @@ tmp/cached-robolectric-classes.jar
 */.DS_Store
 push/airshipconfig.properties
 nohup.out
-temp.json
+temp.json.idea
+.idea/
+hungry-droid.iml
