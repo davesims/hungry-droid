@@ -1,7 +1,5 @@
 package com.hungrymachine.hungrydroid.api;
 
-import com.github.droidfu.cachefu.AbstractCache;
-import com.github.droidfu.cachefu.CacheHelper;
 import com.hungrymachine.hungrydroid.utils.HungryLogger;
 
 import java.io.BufferedInputStream;
@@ -10,12 +8,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import com.github.droidfu.cachefu.*;
 
 /**
- * Extends droid-fu's AbstractCache as a key/value store for String values.
+ * Extends AbstractCache as a key/value store for String values.
  * Overrides AbstractCache's default time limit-based cache invalidation and instead
- * invalidates all caches at EXPIRING_HOUR each day, coordinated with LivingSocial's deals release
- * schedule.
  *
  * @author davesims
  */
@@ -66,28 +63,6 @@ public class HungryCache extends AbstractCache<String, String> {
     }
 
     /**
-     * Overriding sanitizeDiskCache since the base class removes files based on an
-     * expiration time length, and DealsCache removes based on time of day.
-     */
-    @Override
-    public synchronized void sanitizeDiskCache() {
-        try {
-            File[] cachedFiles = new File(diskCacheDirectory).listFiles();
-            if (cachedFiles == null) {
-                return;
-            }
-            for (File f : cachedFiles) {
-                if (!testFileCacheIsValid(f)) {
-                    HungryLogger.d(name, "DISK cache expiration for file " + f.toString());
-                    f.delete();
-                }
-            }
-        } catch (Exception ex) {
-            HungryLogger.e(name, "Exception attempting to sanitize disk cache: " + ex.getMessage());
-        }
-    }
-
-    /**
      * Removes all data from the MEM and DISK caches.
      */
     public static void clearCache() {
@@ -111,9 +86,10 @@ public class HungryCache extends AbstractCache<String, String> {
      * @return
      */
     public static String getValueWithoutValidation(String key) {
-        return instance().getValueIgnoreValidation(key);
+//        TODO: implement getting value without validation
+//        return instance().getValueIgnoreValidation(key);
+      return null;
     }
-
 
 }
 
