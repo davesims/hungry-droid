@@ -1,7 +1,8 @@
 package com.hungrymachine.hungrydroid.api;
 
 import android.content.Context;
-import com.xtremelabs.robolectric.RobolectricTestRunner;
+import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

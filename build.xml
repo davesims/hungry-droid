@@ -22,7 +22,7 @@
             <classpath>
                 <pathelement path="${out.dir}/classes"/>
                 <pathelement path="${out.dir}/gen"/>
-                <path refid="android.target.classpath"/>
+                <path refid="project.target.class.path"/>
                 <fileset dir="${test.libs.dir}" includes="*.jar"/>
                 <fileset dir="${external.libs.dir}" includes="*.jar"/>
             </classpath>
@@ -45,8 +45,7 @@
                 <pathelement path="${out.test.dir}"/>
                 <fileset dir="${test.libs.dir}" includes="*.jar"/>
                 <fileset dir="${external.libs.dir}" includes="*.jar"/>
-                <path refid="android.target.classpath"/>
-
+                <path refid="project.target.class.path"/>
             </classpath>
         </junit>
         <fail if="junit.failure" message="Unit test(s) failed. See reports!"/>
