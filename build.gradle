@@ -1,2 +1,43 @@
-ant.importBuild 'build.xml'
-defaultTasks = ['release']
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.7.+'
+  }
+}
+
+apply plugin: 'android'
+
+task test(dependsOn: [compile, compileTest]) << {
+    println 'running unit tests'
+}
+
+android {
+  compileSdkVersion 16
+  buildToolsVersion '17'
+
+  sourceSets {
+    main {
+      manifest.srcFile 'AndroidManifest.xml'
+      java.srcDirs = ['src']
+      resources.srcDirs = ['src']
+      renderscript.srcDirs = ['src']
+      res.srcDirs = ['res']
+      assets.srcDirs = ['assets']
+    }
+
+    instrumentTest.setRoot('tests')
+    instrumentTest {
+      java.srcDirs = ['tests/src']
+      res.srcDirs = ['tests/res']
+      assets.srcDirs = ['tests/assets']
+      resources.srcDirs = ['tests/src']
+    }
+  }
+
+  dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')    
+  }
+}
